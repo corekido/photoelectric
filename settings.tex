@@ -1,0 +1,92 @@
+% ==========================================
+% Borders & Geometry
+% ==========================================
+\usepackage[margin=2.2cm]{geometry}
+\usepackage[hang,flushmargin]{footmisc}
+
+% ==========================================
+% Equations & Figures
+% ==========================================
+\usepackage{amsmath}
+\usepackage{nccmath}
+\usepackage{amssymb}
+% \usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{xcolor}
+
+% ==========================================
+% 3. Better Tables & Code Listing
+% ==========================================
+\usepackage{booktabs}
+\usepackage{datatool}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% ==========================================
+% 4. Text Related
+% ==========================================
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{xepersian}
+
+% ==========================================
+% 5. Header Settings
+% ==========================================
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{آزمایشگاه فیزیک جدید}
+\fancyhead[C]{{آزمایش فوتوالکتریک}}
+\fancyhead[L]{صفحه \thepage}
+\renewcommand{\headrulewidth}{1pt}
+\setlength{\headheight}{14.49998pt}
+
+% ==========================================
+% 6. Font Settings
+% ==========================================
+
+\settextfont{XBNiloofar.ttf}[
+    Path = ./fonts/ ,
+    BoldFont = XBNiloofarbd.ttf]
+\setmathrm{latinmodern-math.otf}[Path = ./fonts/]
+\onehalfspacing
+\setlist[itemize,1]{label=\(\bullet\)} % تنظیمات بولت پوینت‌های لیست
+
+% ==========================================
+% 7. Listing Settings
+% ==========================================
+
+\definecolor{codegray}{rgb}{0.4,0.4,0.4}
+\definecolor{codecomment}{rgb}{0.5,0.5,0.5}
+
+\lstdefinestyle{cleanpython}{
+    language=Python,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\bfseries\color{black!85},
+    commentstyle=\itshape\color{codecomment},
+    stringstyle=\color{codegray},
+    numbers=left,
+    numberstyle=\tiny\color{codegray},
+    stepnumber=1,
+    numbersep=10pt,
+    frame=lines,
+    rulecolor=\color{black!20},
+    breaklines=true,
+    showstringspaces=false
+}
+
+\lstset{style=cleanpython}
+
+% ==========================================
+% 8. Custom Commands
+% ==========================================
+
+\DTLloaddb[noheader=false]{myequipment}{data.csv}
+\newcommand{\khat}{\noindent\rule{\textwidth}{0.5pt}}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\newcommand{\kir}[1]{\hat{\mathbf{e}}_{#1}}

@@ -1,0 +1,10 @@
+
+
+
+
+\subsection*{\Large وسایل مورد نیاز}
+\vspace{5mm}
+\begin{enumerate}
+    \DTLforeach{myequipment}{\eqId=id, \eqName=name, \eqRole=role}
+    {\item \textbf{\eqName}: \textcolor{black!70}{\eqRole}}
+\end{enumerate}
