@@ -37,10 +37,23 @@
 }
 
 \begin{equation*}
+    \begin{aligned}
+         & h\left(\unit{\joule\second}\right)           &  &  & \text{ثابت پلانک}
+         & \quad\qquad \varphi \left(\unit{\joule}\right)    &  &  & \text{تابع کار}
+         & \quad\qquad V(\unit{\volt})                       &  &  & \text{ولتاژ معکوس}
+        \\
+         & a \left(\unit{\volt\second}\right)           &  &  & \text{شیب برازش}
+         & \quad\qquad b \left(\unit{\volt}\right)           &  &  & \text{عرض از مبدا}
+         & \quad\qquad \nu_0 \left(\unit{\per\second}\right) &  &  & \text{فرکانس آستانه}
+    \end{aligned}
+\end{equation*}
+
+\begin{equation*}
     V = \frac{h \nu}{e} - \frac{h \nu_0}{e} \implies
     V = a \nu - b \implies
     h = e \,a \,, \quad \Delta h = e \Delta a.
 \end{equation*}
+
 
 \begin{align*}
     h        & = (\num{0.3847e-14})(\num{1.602e-19}) = \qty{6.163e-34}{\joule\second} \\
@@ -60,3 +73,5 @@
 \begin{equation*}
     \varphi \pm \Delta\varphi = - b \pm \Delta b = 1.574\pm 0.102 \ \unit{\electronvolt}
 \end{equation*}
+
+
